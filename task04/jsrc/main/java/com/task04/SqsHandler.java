@@ -6,8 +6,8 @@ import com.syndicate.deployment.annotations.events.SqsTriggerEventSource;
 import com.syndicate.deployment.annotations.lambda.LambdaHandler;
 import com.syndicate.deployment.model.RetentionSetting;
 
-
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @LambdaHandler(
@@ -24,10 +24,26 @@ import java.util.Map;
 public class SqsHandler implements RequestHandler<Object, Map<String, Object>> {
 
 	public Map<String, Object> handleRequest(Object request, Context context) {
-		System.out.println("Hello from lambda");
-		Map<String, Object> resultMap = new HashMap<String, Object>();
-		resultMap.put("statusCode", 200);
-		resultMap.put("body", "Hello from Lambda");
-		return resultMap;
+		System.out.println("Received SQS event");
+
+		// Convert the request to a Map and extract messages
+		if (request instanceof Map) {
+			Map<String, Object> event = (Map<String, Object>) request;
+			Object recordsObj = event.get("Records");
+
+			if (recordsObj instanceof List) {
+				List<Map<String, Object>> records = (List<Map<String, Object>>) recordsObj;
+				for (Map<String, Object> record : records) {
+					String messageBody = (String) record.get("body");
+					System.out.println("SQS Message: " + messageBody);
+					context.getLogger().log("SQS Message: " + messageBody);
+				}
+			}
+		}
+
+		Map<String, Object> response = new HashMap<>();
+		response.put("statusCode", 200);
+		response.put("body", "SQS Messages Processed Successfully");
+		return response;
 	}
 }
