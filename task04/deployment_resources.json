@@ -15,9 +15,9 @@
             "ssm:PutParameter",
             "ssm:GetParameter",
             "kms:Decrypt",
+            "sqs:GetQueueAttributes",
             "sqs:ReceiveMessage",
-            "sqs:DeleteMessage",
-            "sqs:GetQueueAttributes"
+            "sqs:DeleteMessage"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -31,7 +31,7 @@
   "async_queue": {
     "resource_type": "sqs_queue",
     "fifo_queue": false,
-    "visibility_timeout": 150,
+    "visibility_timeout": 310,
     "delay_seconds": 0,
     "maximum_message_size": 1024,
     "message_retention_period": 60,
