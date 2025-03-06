@@ -14,7 +14,7 @@ import java.util.Map;
     lambdaName = "sqs_handler",
 	roleName = "sqs_handler-role",
 	isPublishVersion = true,
-	aliasName = "${lambdas_alias_name}",
+	aliasName = "learn",
 	logsExpiration = RetentionSetting.SYNDICATE_ALIASES_SPECIFIED
 )
 @SqsTriggerEventSource(
@@ -23,6 +23,8 @@ import java.util.Map;
 )
 public class SqsHandler implements RequestHandler<Object, Map<String, Object>> {
 
+
+	@Override
 	public Map<String, Object> handleRequest(Object request, Context context) {
 		System.out.println("Received SQS event");
 
