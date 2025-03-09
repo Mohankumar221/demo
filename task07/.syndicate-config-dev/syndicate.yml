@@ -1,0 +1,17 @@
+account_id: '196241772369'
+deploy_target_bucket: syndicate-education-platform-custom-sandbox-artifacts-sbox01/fd0eaec1/task07
+expiration: 2025-03-09 10:10:57.652025+00:00
+extended_prefix_mode: true
+iam_permissions_boundary: arn:aws:iam::196241772369:policy/eo_role_boundary
+project_path: C:\Users\priyanshukumar_jha\Desktop\demo\task07
+region: eu-central-1
+resources_prefix: cmtr-fd0eaec1-
+tags:
+  run_id: JAP-08
+  run_type: stm
+  type: user
+  user_id: fd0eaec1
+temp_aws_access_key_id: ASIAS3MHLZ5I5RRIK26N
+temp_aws_secret_access_key: var9CeJkiQx2RmqOHpfG1zUtmvgRuniakwYpsOOJ
+temp_aws_session_token: IQoJb3JpZ2luX2VjECoaCXVzLWVhc3QtMSJGMEQCICDVvRIkXSckiQnRzkTOp7w26zpDJ0KMtv3lQsY1FoUvAiB78DaYDuV96qLD9zThCAO291rH0+VV+00VU+Tg9EMbESrcAghyEAEaDDE5NjI0MTc3MjM2OSIMeB0IEDk8k5M0BwuaKrkCUqcwlqL3UMOiCar+tEkvZDqRnQ/c9GeWPBZ6tzkw8m+2UoJTVaZlVfcecw6aWiMk1FqgkkCcRqEC24I9eNouu7asrmzfxUVELnRYQcXkg/c/pv6A/GqQlrP1abtKEcbdsqIe/gVN8WwNCcWhtWJ7NbHlDy6feqB2ALMwNSlxTTDXnb9rDdL7xxJOCtvRq/vpJQfF6IDzrg7GcZ+wsLSHhxwApC/2GfJKhi4eN7JVo5dHo4nwT01b2eJKVd0nROsg4WYhUBGV5ncrZziNwMrnqmEleVbNHD0Tj3iNb3w34xoW1R75v3H0uzHrOoN3aCW+Llgrb0+Mh8D2vbqm+jMAGVXhCKZPxewWkjHolJAY6Pu+aZg5Q+MYSpFh+vQqEeZuXZfyl4us10n5qUJFoXNR1LsK8heFbOLKETCGubW+BjqeAfH9WskpAAkJy6iwwrUK2Fm9Q6P9sVBehDmP1Bpu0nGbO4gyer0niWgKvfNU3Lt91j/1W41+bXmY2bCvGHsJ3XVLOzNaarv5Qgw9fkK6s/9q9VBU6u4XfQ2Ynr9AoHimZzYN07x3lywv70P5RI0mMDQqjoNXjF0oj34taAIHJpX8fDifG6CwtF+kSWjlZ+AeOUCMXESo+jIfv/MVTRre
+use_temp_creds: false
