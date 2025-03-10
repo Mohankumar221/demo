@@ -1,0 +1,15 @@
+{
+  "name": "processor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "zip -r function.zip processor.js node_modules"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1234.0",
+    "uuid": "^9.0.0"
+  }
+}
