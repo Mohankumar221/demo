@@ -27,6 +27,14 @@
       "parameter": "client_id"
     }
   },
+  "functions": {
+    "signup": "api_handler.signup",
+    "signin": "api_handler.signin",
+    "getTables": "api_handler.getTables",
+    "addTable": "api_handler.addTable",
+    "getReservations": "api_handler.getReservations",
+    "addReservation": "api_handler.addReservation"
+  },
   "publish_version": true,
   "alias": "${lambdas_alias_name}",
   "url_config": {},
