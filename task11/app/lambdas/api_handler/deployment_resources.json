@@ -1,0 +1,26 @@
+{
+  "api_handler-role": {
+    "predefined_policies": [],
+    "principal_service": "lambda",
+    "custom_policies": [
+      "lambda-basic-execution"
+    ],
+    "resource_type": "iam_role",
+    "tags": {}
+  },
+  "simple-booking-userpool": {
+    "resource_type": "cognito_idp",
+    "user_pool_name": "simple-booking-userpool",
+    "client": {
+      "client_name": "client-app",
+      "generate_secret": false,
+      "explicit_auth_flows": [
+        "ALLOW_ADMIN_USER_PASSWORD_AUTH",
+        "ALLOW_CUSTOM_AUTH",
+        "ALLOW_USER_SRP_AUTH",
+        "ALLOW_REFRESH_TOKEN_AUTH"
+      ]
+    },
+    "tags": {}
+  }
+}
