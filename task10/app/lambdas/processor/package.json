@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "build": "zip -r function.zip processor.js node_modules"
-  },
+  "scripts": {},
   "author": "",
   "license": "ISC",
   "dependencies": {

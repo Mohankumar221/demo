@@ -12,11 +12,11 @@
             "dynamodb:PutItem",
             "dynamodb:Batch*",
             "dynamodb:DeleteItem",
-            "xray:PutTraceSegments",
-            "xray:PutTelemetryRecords",
             "ssm:PutParameter",
             "ssm:GetParameter",
-            "kms:Decrypt"
+            "kms:Decrypt",
+            "xray:PutTraceSegments",
+            "xray:PutTelemetryRecords"
           ],
           "Effect": "Allow",
           "Resource": "*"
