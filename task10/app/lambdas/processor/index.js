@@ -5,8 +5,8 @@ const { v4: uuidv4 } = require('uuid');
 
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
 
-const WEATHER_API_URL = 'https://api.open-meteo.com/v1/forecast?latitude=35&longitude=139&hourly=temperature_2m';
-const DYNAMODB_TABLE_NAME = process.env.target_table;
+const WEATHER_API_URL = 'https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m';
+const DYNAMODB_TABLE_NAME = 'Weather';
 
 exports.handler = async (event, context) => {
   const segment = AWSXRay.getSegment();
@@ -81,3 +81,4 @@ async function storeWeatherDataInDynamoDB(weatherData) {
 
   await dynamoDb.put(params).promise();
 }
+
