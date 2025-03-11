@@ -103,6 +103,7 @@ async function getTables() {
     TableName: TABLES_TABLE_NAME,
   };
 
+
   try {
     const result = await dynamoDb.scan(params).promise();
     return formatResponse(200, { tables: result.Items });
