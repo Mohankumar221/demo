@@ -181,30 +181,17 @@
         "responses": {
           "200": {
             "description": "User created successfully.",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/SignupResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Invalid request payload.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Server error occurred while creating user.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             }
@@ -222,7 +209,7 @@
             }
           },
           "passthroughBehavior": "when_no_match",
-          "type": "aws_proxy"
+          "type": "aws"
         }
       }
     },
@@ -295,7 +282,7 @@
             }
           },
           "passthroughBehavior": "when_no_match",
-          "type": "aws_proxy"
+          "type": "aws"
         }
       }
     },
