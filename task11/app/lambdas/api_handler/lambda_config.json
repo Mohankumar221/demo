@@ -25,15 +25,9 @@
       "resource_name": "${booking_userpool}",
       "resource_type": "cognito_idp",
       "parameter": "client_id"
-    }
-  },
-  "functions": {
-    "signup": "api_handler.signup",
-    "signin": "api_handler.signin",
-    "getTables": "api_handler.getTables",
-    "addTable": "api_handler.addTable",
-    "getReservations": "api_handler.getReservations",
-    "addReservation": "api_handler.addReservation"
+    },
+    "tables_table": "${tables_table}",
+    "reservations_table": "${reservations_table}"
   },
   "publish_version": true,
   "alias": "${lambdas_alias_name}",
